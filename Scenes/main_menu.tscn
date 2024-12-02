@@ -1,0 +1,111 @@
+[gd_scene load_steps=11 format=3 uid="uid://rhapjn85yl2s"]
+
+[ext_resource type="FontFile" uid="uid://ceiyav6kygmre" path="res://Asests/Z-Y/Fonts/alfont_com_ArbFONTS-DG-Modal3at-Bold.ttf" id="2_2vj2c"]
+[ext_resource type="Texture2D" uid="uid://dpa52vyhw5mdu" path="res://Asests/Z-Y/Assests/Free Pixel Art Forest/Free Pixel Art Forest/Preview/Background.png" id="2_tkpa0"]
+[ext_resource type="AudioStream" uid="uid://dt2tf1atehqo6" path="res://Asests/Sounds/Sound effects/night-ambience-17064.mp3" id="3_2dmik"]
+[ext_resource type="AudioStream" uid="uid://dyydm7gus0y3h" path="res://Asests/Sounds/Sound effects/wind-blowing-sfx-12809.mp3" id="4_ks3ga"]
+[ext_resource type="AudioStream" uid="uid://cp8lw81b2wcus" path="res://Asests/Sounds/Sound effects/calming-rain-257596.mp3" id="5_0k3nj"]
+
+[sub_resource type="Curve" id="Curve_h3nhl"]
+max_value = 30.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_gcvlk"]
+max_value = 30.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.240909, 15.9623), 0.0, 0.0, 0, 0, Vector2(1, 15.0566), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_nso6x"]
+max_value = 3.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_v2cs0"]
+curve_x = SubResource("Curve_h3nhl")
+curve_y = SubResource("Curve_gcvlk")
+curve_z = SubResource("Curve_nso6x")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d8iih"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(700, 1, 1)
+gravity = Vector3(0, 3000, 0)
+scale_min = 0.2
+scale_max = 2.0
+scale_over_velocity_curve = SubResource("CurveXYZTexture_v2cs0")
+
+[node name="Main Menu" type="Node2D"]
+
+[node name="Dark" type="Sprite2D" parent="."]
+position = Vector2(291.25, 324)
+scale = Vector2(0.628772, 0.825977)
+texture = ExtResource("2_tkpa0")
+
+[node name="Light" type="Sprite2D" parent="."]
+position = Vector2(860.25, 324)
+scale = Vector2(0.628772, 0.825977)
+texture = ExtResource("2_tkpa0")
+
+[node name="PointLight2D" type="PointLight2D" parent="Light"]
+position = Vector2(-3.57836, 1.2107)
+texture = ExtResource("2_tkpa0")
+
+[node name="PointLight2D5" type="PointLight2D" parent="Light"]
+position = Vector2(-0.397987, 1.21071)
+texture = ExtResource("2_tkpa0")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Light"]
+position = Vector2(-0.397652, 2.42139)
+texture = ExtResource("2_tkpa0")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Light"]
+position = Vector2(-0.39753, 2.42139)
+texture = ExtResource("2_tkpa0")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Light"]
+position = Vector2(-1.98801, -1.69277e-05)
+texture = ExtResource("2_tkpa0")
+
+[node name="1" type="Label" parent="."]
+offset_left = 196.0
+offset_top = -2.0
+offset_right = 721.0
+offset_bottom = 185.0
+rotation = 0.00156547
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "DARK I"
+
+[node name="2" type="Label" parent="."]
+offset_left = 573.0
+offset_right = 1198.0
+offset_bottom = 187.0
+theme_override_colors/font_color = Color(0, 0, 0.0509804, 1)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "N LIGHT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2dmik")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ks3ga")
+volume_db = 3.0
+autoplay = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0k3nj")
+volume_db = 8.0
+pitch_scale = 4.0
+autoplay = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(0, 0.344568, 0.818765, 1)
+position = Vector2(562, 0)
+emitting = false
+amount = 700
+process_material = SubResource("ParticleProcessMaterial_d8iih")
+lifetime = 2.0
+visibility_rect = Rect2(-700, -200, 700, 400)

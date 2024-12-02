@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cp8lw81b2wcus"
+path="res://.godot/imported/calming-rain-257596.mp3-92edbe47a63c5f5f26c760c4a0c23b7b.mp3str"
+
+[deps]
+
+source_file="res://Asests/Sounds/Sound effects/calming-rain-257596.mp3"
+dest_files=["res://.godot/imported/calming-rain-257596.mp3-92edbe47a63c5f5f26c760c4a0c23b7b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

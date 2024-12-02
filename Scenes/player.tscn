@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dumkniswjtxhy"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="PlayerANIM" type="AnimationPlayer" parent="."]
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
