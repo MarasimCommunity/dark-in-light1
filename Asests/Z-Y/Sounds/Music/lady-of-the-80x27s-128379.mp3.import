@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://4nb2yo3liphp"
-path="res://.godot/imported/lady-of-the-80x27s-128379.mp3-e246322fe50bcfa488e485b3fa1e77cb.mp3str"
+path="res://.godot/imported/lady-of-the-80x27s-128379.mp3-8d939367d347aadf709b556a7265689e.mp3str"
 
 [deps]
 
-source_file="res://Asests/Sounds/Music/lady-of-the-80x27s-128379.mp3"
-dest_files=["res://.godot/imported/lady-of-the-80x27s-128379.mp3-e246322fe50bcfa488e485b3fa1e77cb.mp3str"]
+source_file="res://Asests/Z-Y/Sounds/Music/lady-of-the-80x27s-128379.mp3"
+dest_files=["res://.godot/imported/lady-of-the-80x27s-128379.mp3-8d939367d347aadf709b556a7265689e.mp3str"]
 
 [params]
 

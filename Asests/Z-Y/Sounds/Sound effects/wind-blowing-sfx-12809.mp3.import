@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dyydm7gus0y3h"
-path="res://.godot/imported/wind-blowing-sfx-12809.mp3-4b1418e14103e6d37b376345b10799af.mp3str"
+path="res://.godot/imported/wind-blowing-sfx-12809.mp3-68795754c0dd1e2a047c881a3b54ba0f.mp3str"
 
 [deps]
 
-source_file="res://Asests/Sounds/Sound effects/wind-blowing-sfx-12809.mp3"
-dest_files=["res://.godot/imported/wind-blowing-sfx-12809.mp3-4b1418e14103e6d37b376345b10799af.mp3str"]
+source_file="res://Asests/Z-Y/Sounds/Sound effects/wind-blowing-sfx-12809.mp3"
+dest_files=["res://.godot/imported/wind-blowing-sfx-12809.mp3-68795754c0dd1e2a047c881a3b54ba0f.mp3str"]
 
 [params]
 
