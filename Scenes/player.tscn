@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dumkniswjtxhy"]
+[gd_scene load_steps=6 format=3 uid="uid://dumkniswjtxhy"]
 
 [ext_resource type="Texture2D" uid="uid://u6ndm1g7wkya" path="res://Asests/Z-Y/Assests/PlayerIdle.png" id="1_4v67p"]
+[ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_2038g"]
 
 [sub_resource type="Animation" id="Animation_fquum"]
 resource_name = "Idle"
@@ -113,6 +114,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_2038g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
