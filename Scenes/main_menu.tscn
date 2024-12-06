@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://rhapjn85yl2s"]
+[gd_scene load_steps=9 format=3 uid="uid://rhapjn85yl2s"]
 
 [ext_resource type="Texture2D" uid="uid://d1u4l0kni44tr" path="res://Asests/Z-Y/Assests/background_layer_1.png" id="1_boqiy"]
 [ext_resource type="FontFile" uid="uid://ceiyav6kygmre" path="res://Asests/Z-Y/Fonts/alfont_com_ArbFONTS-DG-Modal3at-Bold.ttf" id="2_2vj2c"]
@@ -6,92 +6,17 @@
 [ext_resource type="AudioStream" uid="uid://dt2tf1atehqo6" path="res://Asests/Z-Y/Sounds/Sound effects/night-ambience-17064.mp3" id="3_2dmik"]
 [ext_resource type="Texture2D" uid="uid://uludrp0lrpfl" path="res://Asests/Z-Y/Assests/background_layer_3.png" id="3_iv7y1"]
 [ext_resource type="Texture2D" uid="uid://dugx7d3huefa" path="res://Asests/Z-Y/Assests/Layer_0000_9.png" id="4_0ytsu"]
-[ext_resource type="AudioStream" uid="uid://dyydm7gus0y3h" path="res://Asests/Z-Y/Sounds/Sound effects/wind-blowing-sfx-12809.mp3" id="4_ks3ga"]
-[ext_resource type="AudioStream" uid="uid://cp8lw81b2wcus" path="res://Asests/Z-Y/Sounds/Sound effects/calming-rain-257596.mp3" id="5_0k3nj"]
 [ext_resource type="Texture2D" uid="uid://b55sef0cye6ob" path="res://Asests/Z-Y/Assests/Layer_0001_8.png" id="5_n6878"]
 [ext_resource type="Texture2D" uid="uid://c1hrh31pg8j5y" path="res://Asests/Z-Y/Assests/Layer_0003_6.png" id="6_2avno"]
 
-[sub_resource type="Curve" id="Curve_h3nhl"]
-max_value = 30.0
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_gcvlk"]
-max_value = 30.0
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.240909, 15.9623), 0.0, 0.0, 0, 0, Vector2(1, 15.0566), 0.0, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Curve" id="Curve_nso6x"]
-max_value = 3.0
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_v2cs0"]
-curve_x = SubResource("Curve_h3nhl")
-curve_y = SubResource("Curve_gcvlk")
-curve_z = SubResource("Curve_nso6x")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_d8iih"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(700, 1, 1)
-gravity = Vector3(0, 3000, 0)
-scale_min = 0.2
-scale_max = 2.0
-scale_over_velocity_curve = SubResource("CurveXYZTexture_v2cs0")
-
 [node name="Main Menu" type="Node2D"]
 
-[node name="Dark" type="Sprite2D" parent="."]
-position = Vector2(657.198, 375.831)
-scale = Vector2(4.09251, 4.20188)
-texture = ExtResource("1_boqiy")
+[node name="BUTTONS SCENE" type="Node2D" parent="."]
+z_index = 2
 
-[node name="BackgroundLayer2" type="Sprite2D" parent="Dark"]
-position = Vector2(-0.0484314, -0.197777)
-scale = Vector2(1.01405, 1.01542)
-texture = ExtResource("2_bvmk1")
+[node name="Name" type="Node2D" parent="BUTTONS SCENE"]
 
-[node name="BackgroundLayer3" type="Sprite2D" parent="Dark"]
-position = Vector2(-0.0484314, -0.197777)
-scale = Vector2(1.01405, 1.01542)
-texture = ExtResource("3_iv7y1")
-
-[node name="BackgroundLayer4" type="Sprite2D" parent="Dark"]
-position = Vector2(53.2196, -268.649)
-scale = Vector2(1.01405, 1.01542)
-texture = ExtResource("4_0ytsu")
-
-[node name="BackgroundLayer5" type="Sprite2D" parent="Dark"]
-position = Vector2(-29.6146, -237.235)
-scale = Vector2(1.01405, 1.01542)
-texture = ExtResource("5_n6878")
-
-[node name="BackgroundLayer6" type="Sprite2D" parent="Dark"]
-position = Vector2(-82.6383, 433.418)
-scale = Vector2(1.09852, 0.331434)
-texture = ExtResource("6_2avno")
-
-[node name="Light" type="Sprite2D" parent="."]
-position = Vector2(860.25, 324)
-scale = Vector2(0.628772, 0.825977)
-
-[node name="PointLight2D" type="PointLight2D" parent="Light"]
-position = Vector2(-3.57836, 1.2107)
-
-[node name="PointLight2D5" type="PointLight2D" parent="Light"]
-position = Vector2(-0.397987, 1.21071)
-
-[node name="PointLight2D2" type="PointLight2D" parent="Light"]
-position = Vector2(-0.397652, 2.42139)
-
-[node name="PointLight2D3" type="PointLight2D" parent="Light"]
-position = Vector2(-0.39753, 2.42139)
-
-[node name="PointLight2D4" type="PointLight2D" parent="Light"]
-position = Vector2(-1.98801, -1.69277e-05)
-
-[node name="1" type="Label" parent="."]
+[node name="DARK I" type="Label" parent="BUTTONS SCENE/Name"]
 offset_left = 196.0
 offset_top = -2.0
 offset_right = 721.0
@@ -101,7 +26,7 @@ theme_override_fonts/font = ExtResource("2_2vj2c")
 theme_override_font_sizes/font_size = 120
 text = "DARK I"
 
-[node name="2" type="Label" parent="."]
+[node name="N LIGHT" type="Label" parent="BUTTONS SCENE/Name"]
 offset_left = 573.0
 offset_right = 1198.0
 offset_bottom = 187.0
@@ -110,26 +35,158 @@ theme_override_fonts/font = ExtResource("2_2vj2c")
 theme_override_font_sizes/font_size = 120
 text = "N LIGHT"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Buttons" type="Node2D" parent="BUTTONS SCENE"]
+
+[node name="Play" type="Button" parent="BUTTONS SCENE/Buttons"]
+offset_left = 422.0
+offset_top = 217.0
+offset_right = 446.0
+offset_bottom = 242.0
+scale = Vector2(13.3384, 4.52137)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+
+[node name="PlLab" type="Label" parent="BUTTONS SCENE/Buttons"]
+offset_left = 431.351
+offset_top = 156.0
+offset_right = 956.351
+offset_bottom = 343.0
+rotation = 0.00156547
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "Pl"
+
+[node name="AYLab" type="Label" parent="BUTTONS SCENE/Buttons"]
+offset_left = 585.0
+offset_top = 164.0
+offset_right = 1210.0
+offset_bottom = 351.0
+scale = Vector2(1.2, 1.2)
+theme_override_colors/font_color = Color(0, 0, 0.0509804, 1)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "AY"
+
+[node name="Settings" type="Button" parent="BUTTONS SCENE/Buttons"]
+offset_left = 320.0
+offset_top = 333.0
+offset_right = 363.0
+offset_bottom = 358.0
+scale = Vector2(13.3384, 4.52137)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+
+[node name="SETTLab" type="Label" parent="BUTTONS SCENE/Buttons"]
+offset_left = 315.0
+offset_top = 276.0
+offset_right = 840.0
+offset_bottom = 463.0
+rotation = 0.00156547
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "Sett"
+
+[node name="INGSLab" type="Label" parent="BUTTONS SCENE/Buttons"]
+offset_left = 593.0
+offset_top = 280.0
+offset_right = 1218.0
+offset_bottom = 467.0
+scale = Vector2(1.2, 1.2)
+theme_override_colors/font_color = Color(0, 0, 0.0509804, 1)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "INGS"
+
+[node name="Quit" type="Button" parent="BUTTONS SCENE/Buttons"]
+offset_left = 410.0
+offset_top = 457.0
+offset_right = 432.0
+offset_bottom = 486.0
+scale = Vector2(13.3384, 4.52137)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+
+[node name="QULab" type="Label" parent="BUTTONS SCENE/Buttons"]
+offset_left = 405.0
+offset_top = 400.0
+offset_right = 930.0
+offset_bottom = 587.0
+rotation = 0.00156547
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "QU"
+
+[node name="ITLab" type="Label" parent="BUTTONS SCENE/Buttons"]
+offset_left = 577.0
+offset_top = 400.0
+offset_right = 1202.0
+offset_bottom = 587.0
+scale = Vector2(1.2, 1.2)
+theme_override_colors/font_color = Color(0, 0, 0.0509804, 1)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "IT"
+
+[node name="ALWAYS SCENE" type="Node2D" parent="."]
+
+[node name="MenuShape" type="Node2D" parent="ALWAYS SCENE"]
+scale = Vector2(1.3, 1.3)
+
+[node name="Dark" type="Sprite2D" parent="ALWAYS SCENE/MenuShape"]
+position = Vector2(657.198, 375.831)
+scale = Vector2(4.09251, 4.20188)
+texture = ExtResource("1_boqiy")
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="ALWAYS SCENE/MenuShape/Dark"]
+position = Vector2(-0.0484314, -0.197777)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("2_bvmk1")
+
+[node name="BackgroundLayer3" type="Sprite2D" parent="ALWAYS SCENE/MenuShape/Dark"]
+position = Vector2(-0.0484314, -0.197777)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("3_iv7y1")
+
+[node name="BackgroundLayer4" type="Sprite2D" parent="ALWAYS SCENE/MenuShape/Dark"]
+position = Vector2(55.8109, -295.605)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("4_0ytsu")
+
+[node name="BackgroundLayer5" type="Sprite2D" parent="ALWAYS SCENE/MenuShape/Dark"]
+position = Vector2(-27.0233, -264.191)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("5_n6878")
+
+[node name="BackgroundLayer6" type="Sprite2D" parent="ALWAYS SCENE/MenuShape/Dark"]
+position = Vector2(42.4683, -16.143)
+scale = Vector2(0.527959, 0.270049)
+texture = ExtResource("6_2avno")
+
+[node name="Light" type="Sprite2D" parent="ALWAYS SCENE/MenuShape"]
+position = Vector2(860.25, 324)
+scale = Vector2(0.628772, 0.825977)
+
+[node name="PointLight2D" type="PointLight2D" parent="ALWAYS SCENE/MenuShape/Light"]
+position = Vector2(1364.17, 182.609)
+scale = Vector2(11.3018, 6.51308)
+texture = ExtResource("1_boqiy")
+
+[node name="Audio" type="Node2D" parent="ALWAYS SCENE"]
+
+[node name="Night" type="AudioStreamPlayer" parent="ALWAYS SCENE/Audio"]
 stream = ExtResource("3_2dmik")
+volume_db = 1.0
 autoplay = true
 
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_ks3ga")
-volume_db = 3.0
-autoplay = true
+[node name="Verison" type="Node2D" parent="ALWAYS SCENE"]
 
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_0k3nj")
-volume_db = 8.0
-pitch_scale = 4.0
-autoplay = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-modulate = Color(0, 0.344568, 0.818765, 1)
-position = Vector2(562, 0)
-emitting = false
-amount = 700
-process_material = SubResource("ParticleProcessMaterial_d8iih")
-lifetime = 2.0
-visibility_rect = Rect2(-700, -200, 700, 400)
+[node name="VerisonLab" type="Label" parent="ALWAYS SCENE/Verison"]
+offset_left = 8.00001
+offset_top = 556.0
+offset_right = 650.0
+offset_bottom = 743.0
+rotation = 0.00156547
+scale = Vector2(0.6, 0.6)
+theme_override_fonts/font = ExtResource("2_2vj2c")
+theme_override_font_sizes/font_size = 120
+text = "Verison : 0.1"
