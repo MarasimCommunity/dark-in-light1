@@ -1,10 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://rhapjn85yl2s"]
+[gd_scene load_steps=16 format=3 uid="uid://rhapjn85yl2s"]
 
+[ext_resource type="Texture2D" uid="uid://d1u4l0kni44tr" path="res://Asests/Z-Y/Assests/background_layer_1.png" id="1_boqiy"]
 [ext_resource type="FontFile" uid="uid://ceiyav6kygmre" path="res://Asests/Z-Y/Fonts/alfont_com_ArbFONTS-DG-Modal3at-Bold.ttf" id="2_2vj2c"]
-[ext_resource type="Texture2D" uid="uid://dpa52vyhw5mdu" path="res://Asests/Z-Y/Assests/Free Pixel Art Forest/Free Pixel Art Forest/Preview/Background.png" id="2_tkpa0"]
-[ext_resource type="AudioStream" uid="uid://dt2tf1atehqo6" path="res://Asests/Sounds/Sound effects/night-ambience-17064.mp3" id="3_2dmik"]
-[ext_resource type="AudioStream" uid="uid://dyydm7gus0y3h" path="res://Asests/Sounds/Sound effects/wind-blowing-sfx-12809.mp3" id="4_ks3ga"]
-[ext_resource type="AudioStream" uid="uid://cp8lw81b2wcus" path="res://Asests/Sounds/Sound effects/calming-rain-257596.mp3" id="5_0k3nj"]
+[ext_resource type="Texture2D" uid="uid://d1lt58pp5dpnd" path="res://Asests/Z-Y/Assests/background_layer_2.png" id="2_bvmk1"]
+[ext_resource type="AudioStream" uid="uid://dt2tf1atehqo6" path="res://Asests/Z-Y/Sounds/Sound effects/night-ambience-17064.mp3" id="3_2dmik"]
+[ext_resource type="Texture2D" uid="uid://uludrp0lrpfl" path="res://Asests/Z-Y/Assests/background_layer_3.png" id="3_iv7y1"]
+[ext_resource type="Texture2D" uid="uid://dugx7d3huefa" path="res://Asests/Z-Y/Assests/Layer_0000_9.png" id="4_0ytsu"]
+[ext_resource type="AudioStream" uid="uid://dyydm7gus0y3h" path="res://Asests/Z-Y/Sounds/Sound effects/wind-blowing-sfx-12809.mp3" id="4_ks3ga"]
+[ext_resource type="AudioStream" uid="uid://cp8lw81b2wcus" path="res://Asests/Z-Y/Sounds/Sound effects/calming-rain-257596.mp3" id="5_0k3nj"]
+[ext_resource type="Texture2D" uid="uid://b55sef0cye6ob" path="res://Asests/Z-Y/Assests/Layer_0001_8.png" id="5_n6878"]
+[ext_resource type="Texture2D" uid="uid://c1hrh31pg8j5y" path="res://Asests/Z-Y/Assests/Layer_0003_6.png" id="6_2avno"]
 
 [sub_resource type="Curve" id="Curve_h3nhl"]
 max_value = 30.0
@@ -38,34 +43,53 @@ scale_over_velocity_curve = SubResource("CurveXYZTexture_v2cs0")
 [node name="Main Menu" type="Node2D"]
 
 [node name="Dark" type="Sprite2D" parent="."]
-position = Vector2(291.25, 324)
-scale = Vector2(0.628772, 0.825977)
-texture = ExtResource("2_tkpa0")
+position = Vector2(657.198, 375.831)
+scale = Vector2(4.09251, 4.20188)
+texture = ExtResource("1_boqiy")
+
+[node name="BackgroundLayer2" type="Sprite2D" parent="Dark"]
+position = Vector2(-0.0484314, -0.197777)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("2_bvmk1")
+
+[node name="BackgroundLayer3" type="Sprite2D" parent="Dark"]
+position = Vector2(-0.0484314, -0.197777)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("3_iv7y1")
+
+[node name="BackgroundLayer4" type="Sprite2D" parent="Dark"]
+position = Vector2(53.2196, -268.649)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("4_0ytsu")
+
+[node name="BackgroundLayer5" type="Sprite2D" parent="Dark"]
+position = Vector2(-29.6146, -237.235)
+scale = Vector2(1.01405, 1.01542)
+texture = ExtResource("5_n6878")
+
+[node name="BackgroundLayer6" type="Sprite2D" parent="Dark"]
+position = Vector2(-82.6383, 433.418)
+scale = Vector2(1.09852, 0.331434)
+texture = ExtResource("6_2avno")
 
 [node name="Light" type="Sprite2D" parent="."]
 position = Vector2(860.25, 324)
 scale = Vector2(0.628772, 0.825977)
-texture = ExtResource("2_tkpa0")
 
 [node name="PointLight2D" type="PointLight2D" parent="Light"]
 position = Vector2(-3.57836, 1.2107)
-texture = ExtResource("2_tkpa0")
 
 [node name="PointLight2D5" type="PointLight2D" parent="Light"]
 position = Vector2(-0.397987, 1.21071)
-texture = ExtResource("2_tkpa0")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Light"]
 position = Vector2(-0.397652, 2.42139)
-texture = ExtResource("2_tkpa0")
 
 [node name="PointLight2D3" type="PointLight2D" parent="Light"]
 position = Vector2(-0.39753, 2.42139)
-texture = ExtResource("2_tkpa0")
 
 [node name="PointLight2D4" type="PointLight2D" parent="Light"]
 position = Vector2(-1.98801, -1.69277e-05)
-texture = ExtResource("2_tkpa0")
 
 [node name="1" type="Label" parent="."]
 offset_left = 196.0
