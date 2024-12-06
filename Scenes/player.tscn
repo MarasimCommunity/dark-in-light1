@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dumkniswjtxhy"]
 
-[ext_resource type="Texture2D" uid="uid://u6ndm1g7wkya" path="res://Asests/Z-Y/Assests/PlayerIdle.png" id="1_4v67p"]
+[ext_resource type="Texture2D" uid="uid://u6ndm1g7wkya" path="res://Asests/A-Z/Assests/PlayerIdle.png" id="1_4v67p"]
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_2038g"]
 
 [sub_resource type="Animation" id="Animation_fquum"]

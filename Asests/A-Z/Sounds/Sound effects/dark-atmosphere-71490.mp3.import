@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxs1ve6ty7561"
+path="res://.godot/imported/dark-atmosphere-71490.mp3-d8efdce3efa5be4cbbeb786a4e1b2f6c.mp3str"
+
+[deps]
+
+source_file="res://Asests/A-Z/Sounds/Sound effects/dark-atmosphere-71490.mp3"
+dest_files=["res://.godot/imported/dark-atmosphere-71490.mp3-d8efdce3efa5be4cbbeb786a4e1b2f6c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
